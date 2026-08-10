@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+.app {
+  min-height: 100vh;
+  background: #f4f6f8;
+  color: #222;
+}
+
+.app.dark {
+  background: #181818;
+  color: white;
+}
+
+.navbar {
+  background: #20232a;
+  color: white;
+  padding: 16px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 5px;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.danger {
+  background: #dc2626;
+  color: white;
+}
+
+.logout {
+  background: #dc2626;
+  color: white;
+}
+
+.container {
+  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.container > h1 {
+  margin-bottom: 25px;
+}
+
+.card,
+.welcome-card,
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 12px
+    rgba(0, 0, 0, 0.08);
+}
+
+.dark .card,
+.dark .welcome-card,
+.dark .stat-card {
+  background: #242424;
+  color: white;
+}
+
+.login-container {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  width: 380px;
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+
+  box-shadow: 0 5px 25px
+    rgba(0, 0, 0, 0.15);
+}
+
+.login-box h1 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.login-box input,
+.login-box select,
+.card input,
+.card select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  font-size: 15px;
+}
+
+.login-box button {
+  width: 100%;
+}
+
+.error {
+  color: #dc2626;
+  margin: 10px 0;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.saved-time {
+  color: #777;
+  margin-top: 10px;
+}
+
+.welcome-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar {
+  width: 65px;
+  height: 65px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.stat-card {
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 30px;
+}
+
+.stat-card p {
+  margin: 10px 0;
+  color: #777;
+}
+
+.permission-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.permission-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+
+.button-group {
+  margin-top: 10px;
+}
+
+.content-box {
+  margin-top: 20px;
+  padding: 20px;
+
+  background: #f5f5f5;
+
+  border-radius: 8px;
+
+  min-height: 150px;
+
+  white-space: pre-wrap;
+
+  line-height: 1.6;
+}
+
+.empty {
+  padding: 30px;
+  text-align: center;
+  color: #777;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.role {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.admin {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.editor {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.viewer {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.error-page {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.error-page h1 {
+  font-size: 80px;
+  color: #dc2626;
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .login-box {
+    width: 90%;
+  }
+}
